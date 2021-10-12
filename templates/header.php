@@ -24,7 +24,7 @@
             <a href="#" class="brand-logo brand-text">Pizza Power</a>
             <ul class="right hide-on-small-and-down" id="nav-mobile">
                 <li>
-                    <a href="#" class="btn brand z-depth-0">Make Your Pizza</a>
+                    <a href="../phpProject/create.php" class="btn brand z-depth-0">Make Your Pizza</a>
                 </li>
             </ul>
         </div>
