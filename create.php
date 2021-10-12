@@ -1,10 +1,18 @@
+<?php
+    if(isset($_POST['submit'])){
+        echo htmlspecialchars($_POST['email']);
+        echo htmlspecialchars($_POST['title']);
+        echo htmlspecialchars($_POST['ingredients']);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <?php include('./templates/header.php'); ?>
     
     <section class="container grey-text">
         <h4 class="center">Create your pizza!</h4>
-        <form action="" method="" class="white">
+        <form action="create.php" method="POST" class="white">
             <label for="email">Your Email:</label>
             <input type="email" name="email" id="email">
             <label for="name">Pizza Name:</label>
@@ -12,7 +20,7 @@
             <label for="ingredients">Ingredients (Comma Separated): </label>
             <input type="text" name="ingredients" id="ingredients">
             <div class="center">
-                <input type="submit" value="hello" class="btn brand z-depth-0">
+                <input type="submit" value="hello" name="submit" class="btn brand z-depth-0">
             </div>
 
         </form>
