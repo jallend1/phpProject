@@ -1,5 +1,6 @@
 <?php
     $errors = array('email' => '', 'title' => '', 'ingredients' => '');
+    $email = $title = $ingredients = '';
     if(isset($_POST['submit'])){
         if(empty($_POST['email'])){
             $errors['email'] = 'A valid email address is required.';
@@ -39,17 +40,17 @@
         <h4 class="center">Create your pizza!</h4>
         <form action="create.php" method="POST" class="white">
             <label for="email">Your Email:</label>
-            <input type="text" name="email" id="email" >
+            <input type="text" name="email" id="email" value="<?php echo htmlspecialchars($email) ?>">
                 <div class="red-text">
                     <?php echo $errors['email'] ?>
                 </div>
             <label for="name">Pizza Name:</label>
-            <input type="text" name="title" id="title" >
+            <input type="text" name="title" id="title" value="<?php echo htmlspecialchars($title) ?>">
                 <div class="red-text">
                     <?php echo $errors['title'] ?>
                 </div>
             <label for="ingredients">Ingredients (Comma Separated): </label>
-            <input type="text" name="ingredients" id="ingredients" >
+            <input type="text" name="ingredients" id="ingredients" value="<?php echo htmlspecialchars($ingredients) ?>">
                 <div class="red-text">
                     <?php echo $errors['ingredients'] ?>
                 </div>
