@@ -29,13 +29,15 @@
                 $errors['ingredients'] = 'Ingredients must be a comma separated list.';
             };
         }
+        if(!array_filter($errors)){
+            header('Location: index.php');
+        }     
     }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-    <?php include('./templates/header.php'); ?>
-    
+    <?php include('./templates/header.php'); ?>   
     <section class="container grey-text">
         <h4 class="center">Create your pizza!</h4>
         <form action="create.php" method="POST" class="white">
